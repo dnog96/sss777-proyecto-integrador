@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSS777 — Street Style Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ────────────────────────────────────── -->
+  <header>
+    <div class="header__logo">
+      <span class="logo__sss">SSS</span><span class="logo__777">777</span>
+      <p class="logo__tagline">Street Style Store</p>
+    </div>
+
+    <div class="header__search">
+      <form class="search-form" role="search">
+        <input type="search" placeholder="Buscar productos..." aria-label="Buscar">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+
+    <div class="header__icons">
+      <a href="#" aria-label="Mi cuenta"><i class="fas fa-user"></i></a>
+      <a href="#" aria-label="Favoritos"><i class="fas fa-heart"></i></a>
+      <a href="#" class="cart-icon" aria-label="Carrito">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ── NAVBAR ────────────────────────────────────── -->
+  <nav>
+    <button class="nav__toggle" aria-label="Abrir menú">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav__links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="alta.html">Agregar Producto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1>90s Never<br>Died.</h1>
+      <p>Ropa oversize con actitud. Estilo old school para los de ahora.</p>
+      <a href="#productos" class="btn btn--primary">Ver colección</a>
+    </div>
+  </section>
+
+  <!-- ── PRODUCTOS ──────────────────────────────────── -->
+  <section class="productos" id="productos">
+    <h2 class="section__title">Nueva colección</h2>
+
+    <div class="productos__grid">
+
+      <!-- CARD 1 -->
+      <article class="card">
+        <div class="card__img-wrap">
+          <img src="img/producto1.jpg" alt="Buzo oversize gris" loading="lazy">
+          <span class="card__badge">Nuevo</span>
+          <button class="card__wishlist" aria-label="Agregar a favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+        <div class="card__body">
+          <span class="card__category">Buzos</span>
+          <h3 class="card__title">Buzo Oversize Gris</h3>
+          <p class="card__desc">Algodón premium. Fit relajado estilo 90s.</p>
+          <div class="card__footer">
+            <span class="card__price">$24.999</span>
+            <button class="btn btn--small">Agregar <i class="fas fa-shopping-bag"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="card">
+        <div class="card__img-wrap">
+          <img src="img/producto2.jpg" alt="Campera de jeans oversize" loading="lazy">
+          <span class="card__badge card__badge--sale">-20%</span>
+          <button class="card__wishlist" aria-label="Agregar a favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+        <div class="card__body">
+          <span class="card__category">Camperas</span>
+          <h3 class="card__title">Campera Jeans Oversize</h3>
+          <p class="card__desc">Denim lavado. Talle único, estilo único.</p>
+          <div class="card__footer">
+            <span class="card__price">$39.999</span>
+            <button class="btn btn--small">Agregar <i class="fas fa-shopping-bag"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="card">
+        <div class="card__img-wrap">
+          <img src="img/producto3.jpg" alt="Remera overszie estampada" loading="lazy">
+          <button class="card__wishlist" aria-label="Agregar a favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+        <div class="card__body">
+          <span class="card__category">Remeras</span>
+          <h3 class="card__title">Remera Estampada 90s</h3>
+          <p class="card__desc">Estampado vintage. 100% algodón.</p>
+          <div class="card__footer">
+            <span class="card__price">$14.999</span>
+            <button class="btn btn--small">Agregar <i class="fas fa-shopping-bag"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="card">
+        <div class="card__img-wrap">
+          <img src="img/producto4.jpg" alt="Pantalon cargo oversize" loading="lazy">
+          <span class="card__badge">Hot</span>
+          <button class="card__wishlist" aria-label="Agregar a favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+        <div class="card__body">
+          <span class="card__category">Pantalones</span>
+          <h3 class="card__title">Pantalón Cargo Oversize</h3>
+          <p class="card__desc">Multi-bolsillos. El clásico de los 90s.</p>
+          <div class="card__footer">
+            <span class="card__price">$29.999</span>
+            <button class="btn btn--small">Agregar <i class="fas fa-shopping-bag"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 5 -->
+      <article class="card">
+        <div class="card__img-wrap">
+          <img src="img/producto5.jpg" alt="Hoodie oversize negro" loading="lazy">
+          <button class="card__wishlist" aria-label="Agregar a favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+        <div class="card__body">
+          <span class="card__category">Buzos</span>
+          <h3 class="card__title">Hoodie Oversize Negro</h3>
+          <p class="card__desc">Con capucha. Canguro frontal. Esencial.</p>
+          <div class="card__footer">
+            <span class="card__price">$27.999</span>
+            <button class="btn btn--small">Agregar <i class="fas fa-shopping-bag"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 6 -->
+      <article class="card">
+        <div class="card__img-wrap">
+          <img src="img/producto6.jpg" alt="Gorra snapback 90s" loading="lazy">
+          <span class="card__badge card__badge--sale">-15%</span>
+          <button class="card__wishlist" aria-label="Agregar a favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+        <div class="card__body">
+          <span class="card__category">Accesorios</span>
+          <h3 class="card__title">Gorra Snapback 90s</h3>
+          <p class="card__desc">Visera plana. Bordado vintage. Talle único.</p>
+          <div class="card__footer">
+            <span class="card__price">$9.999</span>
+            <button class="btn btn--small">Agregar <i class="fas fa-shopping-bag"></i></button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="logo__sss">SSS</span><span class="logo__777">777</span>
+        </div>
+        <p>Ropa oversize con actitud. Estilo old school para los de ahora.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="alta.html">Agregar Producto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Guía de talles</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i> contacto@sss777.com</p>
+        <p><i class="fab fa-whatsapp"></i> +54 9 351 1234-5678</p>
+        <p><i class="fas fa-map-marker-alt"></i> Cordoba Capital, Argentina</p>
+      </div>
+
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 SSS777 — Street Style Store. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
