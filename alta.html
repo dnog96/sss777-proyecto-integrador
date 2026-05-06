@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSS777 — Agregar Producto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ── HEADER ────────────────────────────────────── -->
+  <header>
+    <div class="header__logo">
+      <span class="logo__sss">SSS</span><span class="logo__777">777</span>
+      <p class="logo__tagline">Street Style Store</p>
+    </div>
+    <div class="header__search">
+      <form class="search-form" role="search">
+        <input type="search" placeholder="Buscar productos..." aria-label="Buscar">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <div class="header__icons">
+      <a href="#" aria-label="Mi cuenta"><i class="fas fa-user"></i></a>
+      <a href="#" aria-label="Favoritos"><i class="fas fa-heart"></i></a>
+      <a href="#" class="cart-icon" aria-label="Carrito">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ── NAVBAR ────────────────────────────────────── -->
+  <nav>
+    <button class="nav__toggle" aria-label="Abrir menú">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="alta.html" class="active">Agregar Producto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── CONTENIDO ─────────────────────────────────── -->
+  <main class="form-page">
+    <h1>Agregar <span style="color: var(--color-primary)">Producto</span></h1>
+    <p>Completá los campos para agregar un nuevo producto al catálogo.</p>
+
+    <form class="form" action="#" method="post" novalidate>
+
+      <!-- Nombre -->
+      <div class="form__group">
+        <label for="nombre">Nombre del producto <span>*</span></label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ej: Buzo Oversize Gris"
+          required
+          minlength="3"
+          maxlength="80"
+        >
+      </div>
+
+      <!-- Precio y Stock -->
+      <div class="form__row">
+        <div class="form__group">
+          <label for="precio">Precio <span>*</span></label>
+          <input
+            type="number"
+            id="precio"
+            name="precio"
+            placeholder="Ej: 24999"
+            required
+            min="1"
+            max="9999999"
+          >
+        </div>
+        <div class="form__group">
+          <label for="stock">Stock <span>*</span></label>
+          <input
+            type="number"
+            id="stock"
+            name="stock"
+            placeholder="Ej: 50"
+            required
+            min="0"
+            max="9999"
+          >
+        </div>
+      </div>
+
+      <!-- Marca y Categoría -->
+      <div class="form__row">
+        <div class="form__group">
+          <label for="marca">Marca <span>*</span></label>
+          <input
+            type="text"
+            id="marca"
+            name="marca"
+            placeholder="Ej: SSS777"
+            required
+            minlength="2"
+            maxlength="50"
+          >
+        </div>
+        <div class="form__group">
+          <label for="categoria">Categoría <span>*</span></label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Seleccioná una categoría</option>
+            <option value="buzos">Buzos</option>
+            <option value="camperas">Camperas</option>
+            <option value="remeras">Remeras</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Descripción corta -->
+      <div class="form__group">
+        <label for="desc-corta">Descripción corta <span>*</span></label>
+        <input
+          type="text"
+          id="desc-corta"
+          name="desc_corta"
+          placeholder="Ej: Algodón premium. Fit relajado estilo 90s."
+          required
+          minlength="10"
+          maxlength="120"
+        >
+      </div>
+
+      <!-- Descripción larga -->
+      <div class="form__group">
+        <label for="desc-larga">Descripción larga <span>*</span></label>
+        <textarea
+          id="desc-larga"
+          name="desc_larga"
+          placeholder="Describí el producto en detalle: materiales, medidas, cuidados, etc."
+          required
+          minlength="30"
+          maxlength="1000"
+          rows="5"
+        ></textarea>
+      </div>
+
+      <!-- Envío sin cargo -->
+      <div class="form__group">
+        <label class="form__check">
+          <input type="checkbox" name="envio_gratis">
+          Envío sin cargo
+        </label>
+      </div>
+
+      <!-- Edad desde y hasta -->
+      <div class="form__row">
+        <div class="form__group">
+          <label for="edad-desde">Edad desde</label>
+          <input
+            type="number"
+            id="edad-desde"
+            name="edad_desde"
+            placeholder="Ej: 15"
+            min="0"
+            max="99"
+          >
+        </div>
+        <div class="form__group">
+          <label for="edad-hasta">Edad hasta</label>
+          <input
+            type="number"
+            id="edad-hasta"
+            name="edad_hasta"
+            placeholder="Ej: 35"
+            min="0"
+            max="99"
+          >
+        </div>
+      </div>
+
+      <!-- Foto -->
+      <div class="form__group">
+        <label for="foto">Foto del producto <span>*</span></label>
+        <input
+          type="file"
+          id="foto"
+          name="foto"
+          accept="image/png, image/jpeg, image/webp"
+          required
+        >
+      </div>
+
+      <!-- Botones -->
+      <div class="form__actions">
+        <button type="reset" class="btn btn--outline">Limpiar</button>
+        <button type="submit" class="btn btn--primary">
+          Agregar producto <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="logo__sss">SSS</span><span class="logo__777">777</span>
+        </div>
+        <p>Ropa oversize con actitud. Estilo de la vieja escuela para los de ahora.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="alta.html">Agregar Producto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Guía de talles</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i> hola@sss777.com</p>
+        <p><i class="fab fa-whatsapp"></i> +54 9 11 1234-5678</p>
+        <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 SSS777 — Street Style Store. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

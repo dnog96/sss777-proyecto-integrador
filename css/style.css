@@ -811,3 +811,20 @@ footer {
     padding: 40px 16px;
   }
 }
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .form__actions {
+    flex-direction: column;
+  }
+
+  .form__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
