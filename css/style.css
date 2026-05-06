@@ -870,3 +870,136 @@ footer {
   font-size: 0.9rem;
   color: var(--color-muted);
 }
+/* ── NOSOTROS HISTORIA ───────────────────────────────── */
+.nosotros__historia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.nosotros__historia-text h2 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.nosotros__historia-text p {
+  color: var(--color-muted);
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.nosotros__img-placeholder {
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--color-primary);
+}
+
+.nosotros__img-placeholder i {
+  font-size: 5rem;
+}
+
+.nosotros__img-placeholder span {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  letter-spacing: 4px;
+  color: var(--color-muted);
+}
+
+/* ── NÚMEROS ─────────────────────────────────────────── */
+.nosotros__numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 80px;
+  padding: 48px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.nosotros__numero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.numero__valor {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+}
+
+.numero__label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ── CTA ─────────────────────────────────────────────── */
+.nosotros__cta {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--color-surface), #1f1f1f);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.nosotros__cta h2 {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.nosotros__cta p {
+  color: var(--color-muted);
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.nosotros__cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE NOSOTROS ─────────────────────────────── */
+@media (max-width: 900px) {
+  .nosotros__historia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nosotros__numeros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nosotros__numeros {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+
+  .nosotros__cta {
+    padding: 40px 20px;
+  }
+}
