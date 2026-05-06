@@ -1003,3 +1003,19 @@ footer {
     padding: 40px 20px;
   }
 }
+/* ── CARRITO ANIMACIÓN ───────────────────────────────── */
+@keyframes bump {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.cart-bump {
+  animation: bump 0.3s ease;
+}
+
+/* ── WISHLIST ACTIVO ──────────────────────────────────── */
+.card__wishlist.active {
+  background: var(--color-primary);
+  color: #fff;
+}
